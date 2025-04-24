@@ -1,6 +1,10 @@
 const express = require("express");
 const app = express();
 
+// Conexión a la base de datos de MongoDB.
+const dbConnect = require("./config/mongo");
+dbConnect();
+
 // Cargamos las varaibles de entorno del .env.
 require("dotenv").config();
 
